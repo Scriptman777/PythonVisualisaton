@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "GeoPlot", "GeoPlot\GeoPlot.pyproj", "{A81E7BEC-1176-4035-8C91-79C7EEA97BBA}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TmxREST", "TmxREST\TmxREST.pyproj", "{C1C27236-841D-4CE6-A71C-FA3A360E84F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A81E7BEC-1176-4035-8C91-79C7EEA97BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A81E7BEC-1176-4035-8C91-79C7EEA97BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C27236-841D-4CE6-A71C-FA3A360E84F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C27236-841D-4CE6-A71C-FA3A360E84F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
