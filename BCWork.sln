@@ -7,6 +7,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "GeoPlot", "GeoPlot\GeoPlot.
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TmxREST", "TmxREST\TmxREST.pyproj", "{C1C27236-841D-4CE6-A71C-FA3A360E84F2}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ExifData", "ExifData\ExifData.pyproj", "{6F4C821E-B96C-42EB-B6DC-83CE3A88AE08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,8 @@ Global
 		{A81E7BEC-1176-4035-8C91-79C7EEA97BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1C27236-841D-4CE6-A71C-FA3A360E84F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C1C27236-841D-4CE6-A71C-FA3A360E84F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F4C821E-B96C-42EB-B6DC-83CE3A88AE08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F4C821E-B96C-42EB-B6DC-83CE3A88AE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
