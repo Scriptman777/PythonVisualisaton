@@ -9,6 +9,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TmxREST", "TmxREST\TmxREST.
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ExifData", "ExifData\ExifData.pyproj", "{6F4C821E-B96C-42EB-B6DC-83CE3A88AE08}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "WordCloud", "WordCloud\WordCloud.pyproj", "{5CA88960-93E2-45A9-AD25-6FB314D7AF2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{C1C27236-841D-4CE6-A71C-FA3A360E84F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F4C821E-B96C-42EB-B6DC-83CE3A88AE08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6F4C821E-B96C-42EB-B6DC-83CE3A88AE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA88960-93E2-45A9-AD25-6FB314D7AF2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA88960-93E2-45A9-AD25-6FB314D7AF2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
