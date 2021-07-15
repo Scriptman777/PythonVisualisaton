@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>5ca88960-93e2-45a9-ad25-6fb314d7af2b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>WordCloud.py</StartupFile>
+    <StartupFile>NMNM.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="NMNM.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="WordCloud-FIM.py">
       <SubType>Code</SubType>
     </Compile>
