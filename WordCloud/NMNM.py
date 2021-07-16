@@ -6,6 +6,15 @@ import numpy as np
 import PIL
 import random
 
+def recolor_func(word, font_size, position, orientation, random_state=None, **kwargs):
+    
+    if (random.randint(0, 100) > 30):
+        light = int(random.randint(30, 60))
+        return "hsl({}, {}%, {}%)".format(29, 100, light)
+    else:
+        light = int(random.randint(60, 100))
+        return "hsl({}, {}%, {}%)".format(0, 0, light)
+    
 
 
 url = "https://www.novemestonm.cz/o-meste/zakladni-informace/"
@@ -38,11 +47,14 @@ for subpage in urls:
         pass
     
 mask = np.array(PIL.Image.open("NMNM.png"))
+skip_words = ["v", "je", "na", "k", "i", "ve", "o", "s", "z", "ke", "a", "se", "si", "ze", "za", "do", "od", "po", "pro","při", "cz", "www", "e"]
 
-cloud = WordCloud(max_words=1000, background_color="white", width=2000, height=1000, mask=mask, contour_width=3, contour_color='black').generate(all_text)
+cloud = WordCloud(stopwords = skip_words, max_words=1000, collocations=False, background_color="black", mask=mask, contour_width=3, contour_color='white').generate(all_text)
+cloud.recolor(color_func=recolor_func)
 
+cloud.to_file('WordCloudNMNM.png')
 
-plt.figure(figsize=(20,10))
+plt.figure(figsize=(10,7.5))
 plt.imshow(cloud, interpolation="bilinear")
 plt.axis("off")
 plt.show()
