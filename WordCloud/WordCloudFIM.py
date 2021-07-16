@@ -5,10 +5,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import PIL
 
-text = open("FIM.txt").read()
+text = open("FIM.txt", encoding="utf8").read()
 mask = np.array(PIL.Image.open("FIM4.png"))
 
-cloud = wordcloud.WordCloud(background_color="white", mask=mask, width=2000, height=1000).generate(text)
+skip_words = ["v", "je", "na", "k", "i", "ve", "o", "s", "z", "ke", "a", "se", "si", "ze", "za", "do", "od", "po", "pro","při"]
+
+
+cloud = wordcloud.WordCloud(stopwords=skip_words, background_color="white", mask=mask, width=2000, height=1000, collocations=False).generate(text)
 image_colors = wordcloud.ImageColorGenerator(mask)
 
 

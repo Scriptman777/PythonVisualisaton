@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>5ca88960-93e2-45a9-ad25-6fb314d7af2b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>NMNM.py</StartupFile>
+    <StartupFile>WordCloudFIM.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,7 +24,7 @@
     <Compile Include="NMNM.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="WordCloud-FIM.py">
+    <Compile Include="WordCloudFIM.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="WordCloud.py" />
