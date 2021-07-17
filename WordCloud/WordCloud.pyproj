@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>5ca88960-93e2-45a9-ad25-6fb314d7af2b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>WordCloudFIM.py</StartupFile>
+    <StartupFile>WordCloudJP.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,6 +28,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="WordCloud.py" />
+    <Compile Include="WordCloudJP.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

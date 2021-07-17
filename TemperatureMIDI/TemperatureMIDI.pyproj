@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a232405a-4bcd-49f8-b7df-d540198cbd85</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>TemperatureMIDI.py</StartupFile>
+    <StartupFile>TemperatureMIDI_Timidity.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="TemperatureMIDI.py" />
+    <Compile Include="TemperatureMIDI_Timidity.py" />
+    <Compile Include="TemperatureMIDI_PyGame.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
