@@ -13,6 +13,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "WordCloud", "WordCloud\Word
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TemperatureMIDI", "TemperatureMIDI\TemperatureMIDI.pyproj", "{A232405A-4BCD-49F8-B7DF-D540198CBD85}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "NASAMeteorite", "NASAMeteorite\NASAMeteorite.pyproj", "{C6BD7774-7F8A-4444-8F2B-C82EEE6C8491}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,8 @@ Global
 		{5CA88960-93E2-45A9-AD25-6FB314D7AF2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A232405A-4BCD-49F8-B7DF-D540198CBD85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A232405A-4BCD-49F8-B7DF-D540198CBD85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6BD7774-7F8A-4444-8F2B-C82EEE6C8491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6BD7774-7F8A-4444-8F2B-C82EEE6C8491}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
