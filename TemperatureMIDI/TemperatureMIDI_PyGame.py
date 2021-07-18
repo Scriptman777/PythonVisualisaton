@@ -24,7 +24,6 @@ mymidi.add_track(notes)
 mymidi.save_midi()
 
 pygame.init()
-midi.init()
 
 pygame.mixer.music.load("weather.mid")
 pygame.mixer.music.play()
