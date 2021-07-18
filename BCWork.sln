@@ -15,6 +15,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TemperatureMIDI", "Temperat
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "NASAMeteorite", "NASAMeteorite\NASAMeteorite.pyproj", "{C6BD7774-7F8A-4444-8F2B-C82EEE6C8491}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MarketingSQL", "MarketingSQL\MarketingSQL.pyproj", "{AA3B8D70-A540-47D7-88B9-A4AFA3C56B48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,8 @@ Global
 		{A232405A-4BCD-49F8-B7DF-D540198CBD85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6BD7774-7F8A-4444-8F2B-C82EEE6C8491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C6BD7774-7F8A-4444-8F2B-C82EEE6C8491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA3B8D70-A540-47D7-88B9-A4AFA3C56B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA3B8D70-A540-47D7-88B9-A4AFA3C56B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
