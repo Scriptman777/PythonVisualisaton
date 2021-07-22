@@ -1,6 +1,5 @@
 import mysql.connector
-import matplotlib.pyplot as plt
-import matplotlib.colors as colors
+
 import numpy as np
 from collections import Counter
 
@@ -44,21 +43,4 @@ size_result = list(zip(*size_result))
 sizes = list(size_result[0])
 size_counts = list(size_result[1])
 
-fig, axs = plt.subplots(2, 2, figsize=(10, 8))
-N, bins, patches = axs[0][0].hist(female_ages, bins=10)
-axs[0][0].set_title("Female ages")
-recolor_hist(N, bins, patches, "spring")
-
-N, bins, patches = axs[0][1].hist(male_ages, bins=10)
-axs[0][1].set_title("Male ages")
-recolor_hist(N, bins, patches, "winter")
-
-axs[1][0].pie([len(female_ages),len(male_ages)],labels=["F","M"])
-axs[1][0].set_title("Female to male ratio")
-
-colors = ['silver', 'dimgray']
-axs[1][1].barh(sizes, size_counts, color=colors)
-axs[1][1].invert_yaxis()
-axs[1][1].set_title("Most common sizes")
-
-plt.show()
+#TODO, visualize
