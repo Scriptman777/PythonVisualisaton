@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>aa3b8d70-a540-47d7-88b9-a4afa3c56b48</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>MarketingSQL_Matplotlib.py</StartupFile>
+    <StartupFile>MarketingSQL_Seaborn.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
