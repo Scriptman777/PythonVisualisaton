@@ -52,7 +52,7 @@ N, bins, patches = axs[0][1].hist(male_ages, bins=10)
 axs[0][1].set_title("Male ages")
 recolor_hist(N, bins, patches, "winter")
 
-axs[1][0].pie([len(female_ages),len(male_ages)],labels=["F","M"])
+axs[1][0].pie([len(female_ages),len(male_ages)],labels=["F","M"], colors= ['red','blue'])
 axs[1][0].set_title("Female to male ratio")
 
 colors = ['silver', 'dimgray']

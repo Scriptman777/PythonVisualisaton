@@ -1,6 +1,7 @@
 import mysql.connector
-from bokeh.io import show
+from bokeh.io import show, curdoc
 from bokeh.plotting import figure
+from bokeh.themes import built_in_themes
 from bokeh.layouts import gridplot
 from bokeh.transform import cumsum
 from bokeh.models import ColumnDataSource, FactorRange
@@ -57,26 +58,29 @@ end_angles.append(2*np.pi)
 
 # Data source for HBar
 
+curdoc().theme = 'dark_minimal'
+
 size_cds = ColumnDataSource(data=dict(sizes=sizes, counts=size_counts, color=Cividis[len(sizes)]))
 
-
-fig1 = figure(title="Female ages")
-fig1.quad(top=female_ages_hist, bottom=0, left=edges_f[:-1], right=edges_f[1:], fill_color="red", line_color="white")
+fig1 = figure(title="Female ages", plot_width=400, plot_height=400)
+fig1.quad(top=female_ages_hist, bottom=0, left=edges_f[:-1], right=edges_f[1:], fill_color="red", line_color="white", alpha=0.7)
 fig1.xgrid.visible = False
 fig1.ygrid.visible = False
 
-fig2 = figure(title="Male ages")
-fig2.quad(top=male_ages_hist, bottom=0, left=edges_m[:-1], right=edges_m[1:], fill_color="navy", line_color="white")
+fig2 = figure(title="Male ages", plot_width=400, plot_height=400)
+fig2.quad(top=male_ages_hist, bottom=0, left=edges_m[:-1], right=edges_m[1:], fill_color="navy", line_color="white", alpha=0.7)
 fig2.xgrid.visible = False
 fig2.ygrid.visible = False
 
-fig3 = figure(title="Female to male ratio")
+fig3 = figure(title="Female to male ratio", plot_width=400, plot_height=400)
 colors = ["red", "blue"]
-fig3.wedge(x=0, y=0, radius=0.75, start_angle=start_angles, end_angle=end_angles, color=colors)
+fig3.wedge(x=0, y=0, radius=0.75, start_angle=start_angles, end_angle=end_angles, color=colors, alpha=0.7)
 fig3.xgrid.visible = False
+fig3.xaxis.visible = False
 fig3.ygrid.visible = False
+fig3.yaxis.visible = False
 
-fig4 = figure(y_range = sizes, title="Most common sizes")
+fig4 = figure(y_range = sizes, title="Most common sizes", plot_width=400, plot_height=400)
 fig4.hbar(y='sizes', right='counts', color='color', width=0.9, source=size_cds)
 
 graph = gridplot([fig1, fig2, fig3, fig4], ncols=2)
