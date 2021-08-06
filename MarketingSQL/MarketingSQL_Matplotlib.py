@@ -27,14 +27,13 @@ def recolor_hist(N, bins, patches, cmap):
 
 connection = mysql.connector.connect(host="localhost",user="root",passwd="password",database="Marketing")
 
+query = "SELECT age FROM MARKETING_DATA where gender = 'F';"
+result = read_db(query)
+female_ages = untuple(result)
 
 query = "SELECT age FROM MARKETING_DATA where gender = 'M';"
 result = read_db(query)
 male_ages = untuple(result)
-
-query = "SELECT age FROM MARKETING_DATA where gender = 'F';"
-result = read_db(query)
-female_ages = untuple(result)
 
 query = "SELECT size FROM MARKETING_DATA;"
 result = read_db(query)

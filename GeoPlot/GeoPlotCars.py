@@ -18,8 +18,8 @@ def get_production(country):
             return data.get('production')
     return None
 
-with open('cars.json') as data:
-    cars = json.load(data)
+data = open('cars.json')
+cars = json.load(data)
 
 cmap = ColorMap('RdYlGn', alpha=255, levels=100)
 geoplotlib.geojson('europe.json', fill=True, color=get_color, f_tooltip=lambda properties: properties['NAME'])

@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>aa3b8d70-a540-47d7-88b9-a4afa3c56b48</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>MarketingSQL_Seaborn.py</StartupFile>
+    <StartupFile>MarketingSQL_Bokeh.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="MarketingSQL_Bokeh.py" />
     <Compile Include="MarketingSQL_Seaborn.py" />
     <Compile Include="MarketingSQL_Matplotlib.py" />
   </ItemGroup>

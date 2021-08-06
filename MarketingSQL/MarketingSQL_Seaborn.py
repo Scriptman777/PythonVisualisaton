@@ -17,25 +17,16 @@ def untuple(tuple_list):
         list.append(value[0])
     return list
 
-def recolor_hist(N, bins, patches, cmap):
-    fracs = N / N.max()
-    norm = colors.Normalize(fracs.min(), fracs.max())
-    map = plt.cm.get_cmap(cmap)
-    for thisfrac, thispatch in zip(fracs, patches):
-        color = map(norm(thisfrac))
-        thispatch.set_facecolor(color)
-
 
 connection = mysql.connector.connect(host="localhost",user="root",passwd="password",database="Marketing")
-
-
-query = "SELECT age, has_card FROM MARKETING_DATA where gender = 'M';"
-result_male = read_db(query)
-male_ages = untuple(result_male)
 
 query = "SELECT age, has_card FROM MARKETING_DATA where gender = 'F';"
 result_female = read_db(query)
 female_ages = untuple(result_female)
+
+query = "SELECT age, has_card FROM MARKETING_DATA where gender = 'M';"
+result_male = read_db(query)
+male_ages = untuple(result_male)
 
 query = "SELECT size FROM MARKETING_DATA;"
 result = read_db(query)
