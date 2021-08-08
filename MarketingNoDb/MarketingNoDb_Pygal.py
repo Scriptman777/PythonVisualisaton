@@ -1,6 +1,7 @@
 import numpy as np
 from collections import Counter
 import pygal
+from pygal.style import Style, DarkStyle
 
 def create_labels(edges):
     labels = []
@@ -19,9 +20,6 @@ male_ages_hist, edges_m = np.histogram(male_ages, bins = 10)
 result = ['2XL', '3XL', 'M', 'XS', 'S', '2XL', 'L', '2XL', '2XL', '2XL', 'S', '3XL', 'XS', 'L', 'L', '3XL', 'L', 'XL', 'XL', '3XL', 'XS', '2XL', 'XS', 'M', '2XL', 'XS', 'XS', '3XL', 'XS', 'L', '3XL', '3XL', 'S', 'L', 'XL', 'XL', 'S', '3XL', 'L', 'XS', 'XS', 'XS', 'XL', 'XS', 'L', '2XL', 'S', '3XL', 'L', 'S', 'S', 'XS', 'XS', 'XL', 'XL', '3XL', '2XL', '2XL', 'XL', 'XS', 'L', 'S', 'M', 'L', 'L', 'XL', '3XL', '2XL', '3XL', 'M', 'S', 'XS', '3XL', 'M', '2XL', '3XL', '3XL', '2XL', '3XL', 'L', '3XL', '2XL', 'L', 'XL', 'L', 'XS', 'XL', 'L', 'XS', 'L', 'XL', '2XL', '3XL', '2XL', 'L', 'L', 'M', 'L', '3XL', '2XL', 'S', '3XL', 'M', 'XL', 'S', 'S', 'XS', '3XL', 'S', '2XL', 'S', '3XL', 'S', 'S', '3XL', 'XL', 'M', 'XL', 'XS', 'XS', 'XL', 'M', 'S', '2XL', 'M', '2XL', 'L', '2XL', 'M', 'L', 'M', '2XL', 'M', 'L', '2XL', '3XL', 'XS', '3XL', 'XL', 'L', 'XS', '3XL', '2XL', 'L', 'M', 'XS', '2XL', 'S', 'XL', 'M', 'XL', 'S', '2XL', '2XL', 'M', 'M', '2XL', '2XL', 'XL', '2XL', '2XL', 'S', 'XS', '2XL', 'XS', 'XL', '2XL', 'XL', 'M', 'M', 'S', 'M', 'M', 'M', 'M', 'S', '2XL', 'M', 'L', 'XL', '3XL', 'S', 'M', 'XL', '2XL', 'S', 'S', '2XL', 'M', 'XS', 'XS', 'XS', 'XL', 'S', 'L', 'M', 'L', 'L', 'M', 'XS', '2XL', 'XS', 'S', '2XL', 'S', 'L', 'M', 'S', 'XS', '3XL', 'XL', 'S', 'L', '3XL', '2XL', 'XS', 'XL', 'XS', '3XL', 'XS', 'S', '2XL', 'L', 'S', 'M', '3XL', 'S', 'XS', '2XL', 'M', 'XL', 'S', '3XL', '3XL', 'XL', 'XS', 'L', '2XL', 'XL', 'XL', '2XL', '3XL', '3XL', '2XL', 'XS', '3XL', 'S', 'M', 'M', '2XL', 'M', 'XS', 'L', '2XL', 'XS', 'XS', '3XL', 'L', '2XL', 'XL', '2XL', '3XL', 'S', '3XL', 'M', 'M', 'XS', 'XS', '3XL', '2XL', 'XS', 'M', 'S', 'M', '3XL', '2XL', 'XL', 'M', 'XS', 'XL', 'M', '2XL', 'XL', '2XL', '3XL', 'XS', 'XS', 'L', '3XL', 'L', 'XS', 'M', 'XL', 'S', 'L', 'XS', 'S', 'XL', 'L', '2XL', '3XL', 'XS', 'S', 'XL', '3XL', 'XS', 'M', 'M', 'XL', 'M', 'S', 'S', '3XL', 'XS', 'S', 'XS', '2XL', 'XS', 'XS', 'XL', '3XL', 'XL', 'S', '2XL', '2XL', 'XL', 'L', 'XL', 'L', 'XS', 'XL', '2XL', '2XL', 'XS', 'XS', 'L', 'XL', 'XS', '2XL', 'XL', 'S', 'XS', '3XL', 'XS', 'L', 'S', 'M', '3XL', 'XL', 'S', 'XS', 'XS', '2XL', 'XS', 'S', 'M', 'M', '2XL', 'XL', 'M', 'XL', 'XS', '3XL', '2XL', 'L', 'XS', '3XL', 'M', 'XS', '3XL', '2XL', 'XS', '3XL', '3XL', '2XL', '3XL', 'S', 'M', 'XS', 'S', 'XS', 'L', '3XL', 'M', 'S', 'XS', 'S', 'L', '2XL', '3XL', 'XS', 'S', 'L', '2XL', '3XL', 'M', 'S', 'XL', 'XL', 'M', 'S', 'XL', 'L', 'XL', 'L', 'S', 'L', 'M', '2XL', 'XL', 'XS', 'XS', 'M', 'L', 'M', '3XL', 'S', 'S', 'S', '3XL', '2XL', 'XS', 'XL', 'M', 'M', 'XL', 'XL', 'L', 'XL', 'XS', 'XS', '3XL', 'XS', '3XL', '3XL', 'XS', 'S', 'XS', '3XL', '2XL', 'XS', 'S', 'S', 'M', 'S', 'XL', '2XL', 'XL', 'M', 'XS', '3XL', 'XS', 'L', '3XL', 'S', 'L', '2XL', 'M', '3XL', '2XL', 'S', 'M', 'XS', '3XL', 'S', 'S', '3XL', '2XL', 'XS', 'XL', 'L', 'M', 'XL', 'S', '2XL', 'M', '3XL', 'S', 'XS', '2XL', 'XS', '2XL', 'S', 'M', 'L', 'XL', '3XL', 'XS', 'XL', 'XL', 'L', 'L', 'XS', 'M', '3XL', '3XL', '3XL', 'M', '2XL', '2XL', 'M', '3XL', 'L', 'XL', 'S', '3XL', 'XL', '2XL', 'S', 'L', '2XL', 'XS', 'XL', '2XL', 'L', 'S', 'XL', 'M', 'S', '2XL', 'M', 'XS', 'XS', 'XL', 'XS', 'XL', '3XL', '2XL', 'S', 'L', 'M', 'S', 'L', '3XL', 'M', '2XL', 'L', '3XL', 'S', 'XS', 'S', '2XL', 'XS', 'XL', '2XL', 'S', 'M', '2XL', 'XL', 'XS', '2XL', '3XL', '2XL', 'XL', 'M', 'M', 'M', '3XL', 'S', 'XS', 'XS', 'XS', 'S', '2XL', '2XL', 'XS', 'M', 'XL', 'XS', 'S', 'M', 'XS', '2XL', 'M', 'XS', 'L', 'L', 'XL', 'XS', 'M', 'S', 'S', '2XL', 'S', 'L', '2XL', '3XL', 'M', 'M', 'M', 'XS', 'XS', 'L', 'S', '3XL', '3XL', 'M', 'S', 'XL', '2XL', 'M', 'S', 'S', 'M', '2XL', '3XL', 'M', 'S', '3XL', 'M', 'M', 'L', '3XL', '3XL', 'L', 'M', 'L', 'S', 'XS', 'XS', '3XL', 'XS', 'XL', 'S', '3XL', '2XL', 'M', 'XL', 'S', '2XL', 'XL', '2XL', 'L', 'S', 'S', 'M', 'L', 'XL', 'XL', '3XL', 'XS', '3XL', '2XL', 'S', 'L', 'XL', 'M', 'L', 'S', '2XL', 'M', 'XS', 'M', '2XL', 'XL', 'XS', '3XL', 'M', '2XL', 'L', 'L', '2XL', '2XL', 'L', '3XL', 'M', '2XL', 'XL', 'S', '2XL', 'XL', '3XL', '2XL', 'XS', 'M', 'L', 'L', 'L', 'XL', 'M', 'L', '2XL', '3XL', 'XL', 'XL', '3XL', '3XL', 'XS', '3XL', 'S', 'S', 'XL', 'L', '2XL', 'XL', 'L', '3XL', '3XL', 'XS', 'XL', 'XS', 'XL', '2XL', '3XL', 'XL', 'S', 'XS', '2XL', 'S', 'XS', 'M', '2XL', 'S', 'L', '3XL', 'S', 'XL', 'XL', 'M', 'M', 'L', 'M', 'XS', '2XL', 'XS', '3XL', 'M', '2XL', '2XL', 'L', 'M', 'XL', 'M', '3XL', 'S', '2XL', 'XS', 'M', 'S', 'L', '2XL', '3XL', 'M', '2XL', 'S', 'S', '2XL', '3XL', 'L', 'M', 'XS', 'XS', 'XS', '3XL', 'XS', 'S', '2XL', '3XL', '3XL', 'S', 'L', 'L', '2XL', 'M', 'L', 'L', 'XL', '3XL', 'M', 'S', 'M', 'XS', 'XS', 'L', 'L', 'M', 'S', 'XL', 'S', 'S', 'S', '3XL', '3XL', 'L', 'XL', 'XS', 'XL', 'XS', 'XS', 'M', 'M', '3XL', 'S', 'S', '2XL', 'L', '3XL', '2XL', '2XL', '2XL', 'M', '2XL', '3XL', 'XS', 'XS', 'XS', '2XL', 'L', 'XS', 'S', 'XS', '3XL', 'XL', 'S', 'M', '3XL', '2XL', 'XS', 'XS', 'M', 'S', 'XL', 'M', 'XS', 'M', 'XL', 'XL', 'XL', 'S', 'XS', '3XL', '2XL', 'XS', 'M', 'S', 'M', 'XS', 'XL', 'XL', '3XL', 'M', 'M', '2XL', 'L', 'S', 'XL', '3XL', 'M', 'XL', '2XL', 'XL', 'M', 'XS', '2XL', 'XS', 'XL', 'M', '3XL', 'XS', 'S', 'L', '3XL', 'XS', '3XL', 'S', 'L', '2XL', 'XL', 'XS', 'L', 'L', 'L', '2XL', 'S', 'L', 'S', 'S', '3XL', 'XL', 'XL', 'M', 'S', 'XS', 'L', 'S', '2XL', 'S', 'XL', 'L', '2XL', '2XL', 'M', 'L', '2XL', '3XL', 'S', 'XS', 'XS', '2XL', 'M', '3XL', 'M', 'XS', 'S', 'S', 'XS', '3XL', 'M', '2XL', '2XL', 'L', '3XL', 'L', 'XS', 'M', 'L', '2XL', 'XL', 'L', 'XS', 'XS', 'L', 'L', 'L', 'XL', 'XS', 'XL', 'M', '3XL', 'XL', '2XL', '3XL', 'M', 'S', 'S', '3XL', 'S', '2XL', 'XS', '3XL', '3XL', 'XS', 'M', 'M', 'XS', 'M', 'L', 'XS', '3XL', '2XL', 'S', 'L', 'S', 'XS', 'S', 'S', 'M', 'XL', '2XL', '2XL', 'L', '2XL', 'M', 'XL', 'XS', 'XL', 'M', 'M', '3XL', 'M', 'XS', 'L', '2XL', 'M', 'M', '3XL', 'L', '2XL', '2XL', 'XS', 'L', 'L', '3XL', 'XL', '2XL', '2XL', 'S', 'XL', 'L', 'XS', '3XL', 'S', 'L', 'XS', '2XL', 'S', 'S', '3XL', 'S', 'L']
 size_result = Counter(result)
 size_result = size_result.most_common()
-size_result = list(zip(*size_result))
-sizes = list(size_result[0])
-size_counts = list(size_result[1])
 
 # Visualize
 
@@ -30,10 +28,24 @@ female_ages_chart.add('Female ages', female_ages_hist)
 female_ages_chart.x_labels = create_labels(edges_f)
 female_ages_chart.render_to_file('fig1.svg')
 
-hist = pygal.Histogram()
+style = Style(colors=('#0022FF', '#000000'))
+male_ages_chart = pygal.Histogram(style=style)
 datalist = []
 datalist.append((male_ages_hist[0],0,edges_m[0]))
 for x in range(1,len(male_ages_hist)):
     datalist.append((male_ages_hist[x],edges_m[x-1],edges_m[x]))
-hist.add('Male ages', datalist)
-hist.render_to_file('fig2.svg')
+male_ages_chart.add('Male ages', datalist)
+male_ages_chart.render_to_file('fig2.svg')
+
+ratio_chart = pygal.Pie()
+ratio_chart.add('Female',len(female_ages))
+ratio_chart.add('Male',len(male_ages))
+ratio_chart.render_to_file('fig3.svg')
+
+size_chart = pygal.HorizontalBar(style=DarkStyle)
+for size_data in size_result:
+    size_chart.add(size_data[0],size_data[1])
+size_chart.render_to_file('fig4.svg')
+
+
+#Build HTML
