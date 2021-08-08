@@ -21,6 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="MarketingSQL_Pygal.py" />
     <Compile Include="MarketingSQL_Bokeh.py" />
     <Compile Include="MarketingSQL_Seaborn.py" />
     <Compile Include="MarketingSQL_Matplotlib.py" />

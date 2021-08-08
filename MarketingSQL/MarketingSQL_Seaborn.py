@@ -59,10 +59,10 @@ data["card"] = ["Yes" if x=='1' else "No" for x in data["card"]]
 data["gender"].extend(np.repeat('Female',len(separate2[0])).tolist())
 data_frame = pd.DataFrame(data=data)
 sns.violinplot(ax=axs[1][0], data=data_frame, x="gender", y="age", hue="card", split=True, palette=['r','g'])
-
+axs[1][0].set_title("Age distribution by gender and card ownership")
 
 size_data = {"sizes": sizes, "count": size_counts}
 sns.barplot(ax=axs[1][1], y="sizes", x="count", data=size_data, palette="rocket")
-
+axs[1][1].set_title("Most common sizes")
 
 plt.show()
