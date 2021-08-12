@@ -69,7 +69,7 @@ gpu_usage = ColumnDataSource(data=dict(time=[],percent=[]))
 gpu_temp = ColumnDataSource(data=dict(time=[],temp=[]))
 
 p_cpu = figure(plot_width=800, plot_height=400, title="CPU usage %", y_range=(0, 100))
-p_cpu.line(x='time', y='percent', source=source_cpu, line_width=2, line_color="blue", fill_color="blue", fill_alpha=0.3)
+p_cpu.line(x='time', y='percent', source=source_cpu, line_width=2, line_color="blue")
 p_cpu.xaxis.visible = False
 
 p_mem_v = figure(plot_width=800, plot_height=400, title="Virtual memory usage %", y_range=(0, 100))
