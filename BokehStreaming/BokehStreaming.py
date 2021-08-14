@@ -2,7 +2,6 @@ from bokeh.plotting import figure
 from bokeh.io import show, curdoc
 from bokeh.layouts import column, row
 from bokeh.models import ColumnDataSource
-from bokeh.server.server import Server
 import random
 import time
 import psutil

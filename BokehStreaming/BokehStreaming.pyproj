@@ -4,7 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f91db5c4-4af9-499b-8147-14aaa73f962f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>BokehStreaming.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

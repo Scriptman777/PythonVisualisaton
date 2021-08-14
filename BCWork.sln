@@ -21,6 +21,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MarketingNoDb", "MarketingN
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BokehStreaming", "BokehStreaming\BokehStreaming.pyproj", "{F91DB5C4-4AF9-499B-8147-14AAA73F962F}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LibrosaMusicVisualisation", "LibrosaMusicVisualisation\LibrosaMusicVisualisation.pyproj", "{609020FB-4814-4262-B6FC-77604246D835}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,8 @@ Global
 		{19B5A103-CFF2-4FD9-B682-A1712CD030DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F91DB5C4-4AF9-499B-8147-14AAA73F962F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F91DB5C4-4AF9-499B-8147-14AAA73F962F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{609020FB-4814-4262-B6FC-77604246D835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{609020FB-4814-4262-B6FC-77604246D835}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
