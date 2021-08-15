@@ -22,9 +22,13 @@ fig, axs = plt.subplots(plot_amount, 1, figsize=(10,fig_y))
 plt.tight_layout(pad=3.0)
 
 for sound in list:
-    audio, sample_rate = librosa.load(sound)
-    stft = librosa.stft(audio)
-    a_to_db = librosa.amplitude_to_db(np.abs(stft), ref=np.max)
+    try:
+        audio, sample_rate = librosa.load(sound)
+        stft = librosa.stft(audio)
+        a_to_db = librosa.amplitude_to_db(np.abs(stft), ref=np.max)
+    except :
+        print("Error processing file: " + os.path.basename(sound))
+        continue
 
     librosa.display.specshow(a_to_db, ax=axs[current_axis])
     axs[current_axis].set(title="Spectrograph for file: " + os.path.basename(sound))
