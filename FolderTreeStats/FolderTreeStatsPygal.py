@@ -34,13 +34,17 @@ subdirs = get_subdirs(file_path)
 
 treemap = pygal.Treemap(value_formatter=lambda x: '{:.2f}MB'.format(x), style=DarkStyle)
 
+treemap.add(os.path.basename(file_path), [{'value' : get_size(file_path,False)/1000000, 'label': file_path}])
+
 for dir in subdirs:
     bottom_dirs = get_subdirs(dir)
     bot_values = []
     for bot_dir in bottom_dirs:
         print(bot_dir)
         bot_values.append({'value' : get_size(bot_dir,True)/1000000, 'label': bot_dir})
+    bot_values.append({'value' : get_size(dir,False)/1000000, 'label': dir})
     treemap.add(os.path.basename(dir),bot_values)
+
 
 treemap.render_to_file('map.svg')
     
