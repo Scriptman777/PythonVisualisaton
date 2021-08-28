@@ -27,6 +27,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "FolderTreeStats", "FolderTr
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BokehInteractive", "BokehInteractive\BokehInteractive.pyproj", "{CC34EC64-4B55-49CF-8F56-2E8335E5D612}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "SamsungHealthHoloviews", "SamsungHealthHoloviews\SamsungHealthHoloviews.pyproj", "{F8217E24-8A7E-416F-B590-D6B87857FC86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,8 @@ Global
 		{DBED9D3C-AAA8-4899-9FC8-C82D658551C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC34EC64-4B55-49CF-8F56-2E8335E5D612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CC34EC64-4B55-49CF-8F56-2E8335E5D612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8217E24-8A7E-416F-B590-D6B87857FC86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8217E24-8A7E-416F-B590-D6B87857FC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
