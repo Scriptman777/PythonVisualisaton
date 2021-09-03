@@ -1,8 +1,14 @@
 import holoviews as hv
+import numpy as np
+from holoviews import dim
 import pandas as pd
 from bokeh.io import show
 from bokeh.layouts import gridplot
 import csv
+import glob
+import webbrowser
+import tkinter as tk
+from tkinter import filedialog
 
 def fix_csv(csv):
     file = open(csv, 'r+')
@@ -16,35 +22,70 @@ def fix_csv(csv):
     file.truncate()
     file.close()
 
+def get_csv(name, list):
+    for csv_file in list:
+        if str(name) in csv_file:
+            return csv_file
+    return None
+
+root = tk.Tk()
+root.withdraw()
+
+file_path = filedialog.askdirectory()
+
+list = glob.glob(file_path + "/*.csv")
 
 hv.extension('bokeh')
 
-try:
-    complete_heart_df = pd.read_csv('heart_rate.csv')
-    df_heart = complete_heart_df[['com.samsung.health.heart_rate.start_time','com.samsung.health.heart_rate.heart_rate']]
-    df_heart = df_heart.rename(columns={"com.samsung.health.heart_rate.start_time": "Date", "com.samsung.health.heart_rate.heart_rate": "Heart Rate"}).sort_values(by=['Date'])
-except pd.errors.ParserError:
-    fix_csv('heart_rate.csv')
-    complete_heart_df = pd.read_csv('heart_rate.csv')
-    df_heart = complete_heart_df[['com.samsung.health.heart_rate.start_time','com.samsung.health.heart_rate.heart_rate']]
-    df_heart = df_heart.rename(columns={"com.samsung.health.heart_rate.start_time": "Date", "com.samsung.health.heart_rate.heart_rate": "Heart Rate"}).sort_values(by=['Date'])
+heart_csv = get_csv('com.samsung.shealth.tracker.heart_rate',list)
+oxygen_csv = get_csv('com.samsung.shealth.tracker.oxygen_saturation',list)
+step_csv = get_csv('com.samsung.shealth.tracker.pedometer_day_summary',list)
 
-try:
-    complete_oxy_df = pd.read_csv('oxygen.csv')
-    df_oxy = complete_oxy_df[['com.samsung.health.oxygen_saturation.start_time','com.samsung.health.oxygen_saturation.spo2']].rename(columns={"com.samsung.health.oxygen_saturation.start_time": "Date", "com.samsung.health.oxygen_saturation.spo2": "O2"}).sort_values(by=['Date'])
-except pd.errors.ParserError:
-    fix_csv('oxygen.csv')
-    complete_oxy_df = pd.read_csv('oxygen.csv')
-    df_oxy = complete_oxy_df[['com.samsung.health.oxygen_saturation.start_time','com.samsung.health.oxygen_saturation.spo2']].rename(columns={"com.samsung.health.oxygen_saturation.start_time": "Date", "com.samsung.health.oxygen_saturation.spo2": "O2"}).sort_values(by=['Date'])
+graphlist = []
 
+if heart_csv is not None:
+    try:
+        complete_heart_df = pd.read_csv(heart_csv)
+        df_heart = complete_heart_df[['com.samsung.health.heart_rate.start_time','com.samsung.health.heart_rate.heart_rate']]
+        df_heart = df_heart.rename(columns={"com.samsung.health.heart_rate.start_time": "Date", "com.samsung.health.heart_rate.heart_rate": "Heart Rate"}).sort_values(by=['Date'])
+        df_heart['Date'] = pd.to_datetime(df_heart['Date'])
+    except pd.errors.ParserError:
+        fix_csv(heart_csv)
+        complete_heart_df = pd.read_csv(heart_csv)
+        df_heart = complete_heart_df[['com.samsung.health.heart_rate.start_time','com.samsung.health.heart_rate.heart_rate']]
+        df_heart = df_heart.rename(columns={"com.samsung.health.heart_rate.start_time": "Date", "com.samsung.health.heart_rate.heart_rate": "Heart Rate"}).sort_values(by=['Date'])
+        df_heart['Date'] = pd.to_datetime(df_heart['Date'])
+    #axiswise attribute needed to not contaminate the other axis
+    graphlist.append(hv.Scatter(df_heart).opts(width=1000, height=500, xrotation=90, color='red', axiswise=True, size=dim('Heart Rate')/10))
 
-#axiswise attribute needed to not contaminate the other axis
-graph_heart = hv.Curve(df_heart).opts(width=800, height=500, xrotation=90, color='red', axiswise=True)
-graph_oxy = hv.Bars(df_oxy).opts(width=800, height=500, xrotation=90, axiswise=True)
+if oxygen_csv is not None:
+    try:
+        complete_oxy_df = pd.read_csv(oxygen_csv)
+        df_oxy = complete_oxy_df[['com.samsung.health.oxygen_saturation.start_time','com.samsung.health.oxygen_saturation.spo2']].rename(columns={"com.samsung.health.oxygen_saturation.start_time": "Date", "com.samsung.health.oxygen_saturation.spo2": "O2"}).sort_values(by=['Date'])
+    except pd.errors.ParserError:
+        fix_csv(oxygen_csv)
+        complete_oxy_df = pd.read_csv(oxygen_csv)
+        df_oxy = complete_oxy_df[['com.samsung.health.oxygen_saturation.start_time','com.samsung.health.oxygen_saturation.spo2']].rename(columns={"com.samsung.health.oxygen_saturation.start_time": "Date", "com.samsung.health.oxygen_saturation.spo2": "O2"}).sort_values(by=['Date'])
+    #axiswise attribute needed to not contaminate the other axis
+    graphlist.append(hv.Bars(df_oxy).opts(width=1000, height=500, xrotation=90, axiswise=True))
 
-layout = graph_heart + graph_oxy
+if step_csv is not None:
+    try:
+        complete_step_df = pd.read_csv(step_csv)
+        df_step = complete_step_df[['create_time','step_count']].rename(columns={"create_time": "Date", "step_count": "Steps"}).sort_values(by=['Date'])
+        df_step['Date'] = pd.to_datetime(df_step['Date'])
+    except pd.errors.ParserError:
+        fix_csv(step_csv)
+        complete_step_df = pd.read_csv(step_csv)
+        df_step = complete_step_df[['create_time','step_count']].rename(columns={"create_time": "Date", "step_count": "Steps"}).sort_values(by=['Date'])
+        df_step['Date'] = pd.to_datetime(df_step['Date'])
+    #axiswise attribute needed to not contaminate the other axis
+    graphlist.append(hv.Scatter(df_step).opts(width=1000, height=500, xrotation=90, color='green', axiswise=True, size=np.log10(dim('Steps'))).hist()) 
+    
+
+layout = hv.Layout(graphlist).cols(1)
 
 hv.save(layout, 'plot.html', backend='bokeh')
 
-
+webbrowser.open('plot.html')
 
