@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>19b5a103-cff2-4fd9-b682-a1712cd030db</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>MarketingNoDb_Pygal.py</StartupFile>
+    <StartupFile>MarketingNoDb_Plotly.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="MarketingNoDb_Bokeh.py" />
+    <Compile Include="MarketingNoDb_Plotly.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MarketingNoDb_Pygal.py" />
     <Compile Include="MarketingNoDb_Matplotlib.py" />
     <Compile Include="MarketingNoDb_Seaborn.py" />

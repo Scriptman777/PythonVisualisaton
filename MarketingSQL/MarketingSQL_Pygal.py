@@ -75,7 +75,7 @@ size_chart.render_to_file('fig4.svg')
 
 #Build HTML
 
-html = open('output.html','w')
+html = open('Pygal_output.html','w')
 html.write("""
 <html>
 <head>
@@ -91,4 +91,4 @@ html.write("""<object type='image/svg+xml' data='fig4.svg'></object>""" + '\n')
 html.write('</body></html>')  
 html.close()
 
-webbrowser.open('output.html')
+webbrowser.open('Pygal_output.html')

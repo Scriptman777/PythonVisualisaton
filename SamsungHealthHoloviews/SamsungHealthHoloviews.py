@@ -8,7 +8,7 @@ import csv
 import glob
 import webbrowser
 import tkinter as tk
-from tkinter import filedialog
+from tkinter import filedialog, messagebox
 
 def fix_csv(csv):
     file = open(csv, 'r+')
@@ -82,10 +82,12 @@ if step_csv is not None:
     #axiswise attribute needed to not contaminate the other axis
     graphlist.append(hv.Scatter(df_step).opts(width=1000, height=500, xrotation=90, color='green', axiswise=True, size=np.log10(dim('Steps'))).hist()) 
     
+if graphlist:
+    layout = hv.Layout(graphlist).cols(1)
 
-layout = hv.Layout(graphlist).cols(1)
+    hv.save(layout, 'plot.html', backend='bokeh')
 
-hv.save(layout, 'plot.html', backend='bokeh')
-
-webbrowser.open('plot.html')
+    webbrowser.open('plot.html')
+else:
+    messagebox.showerror('ERROR','No graph could be created from supplied data')
 
