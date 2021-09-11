@@ -14,14 +14,18 @@ river_urls = []
 for link in river_links:
     river_urls.append('http://www.pla.cz/portal/sap/cz/PC/' + link.get('href'))
 
-#for url in river_urls:
-url = river_urls[0]
-subpage = urlopen(url)
-page_content = subpage.read().decode("utf-8")
-soup = BeautifulSoup(page_content, "html.parser")
-table = soup.find(id='ObsahCPH_DataMereniGV')
-df = pd.read_html(str(table))[0]
+for url in river_urls:
+    subpage = urlopen(url)
+    page_content = subpage.read().decode("utf-8")
+    soup = BeautifulSoup(page_content, "html.parser")
+    table = soup.find(id='ObsahCPH_DataMereniGV')
+    df = pd.read_html(str(table))[0]
+    df = df.rename(columns={'Unnamed: 0': 'Date'})
+    df['Date'] = pd.to_datetime(df['Date'])
+    try:
+        fig = px.area(df, x='Date', y='H [cm]', title=soup.find(id='ObsahCPH_UdajeStaniceFW_NazevStaniceLbl').text)
+        fig.show()
+    except:
+        pass
 
-fig = px.area(df, x='Unnamed: 0', y='H [cm]')
-
-fig.write_html("Plotly output.html")
+# https://hub.gke2.mybinder.org/user/ipython-ipython-in-depth-i86oupeo/notebooks/binder/PLARiverVisualisation.ipynb
