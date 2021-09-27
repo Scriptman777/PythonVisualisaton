@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>c6bd7774-7f8a-4444-8f2b-c82eee6c8491</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>NASAMeteoriteHeatmap.py</StartupFile>
+    <StartupFile>NASAMeteorite_Plotly.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,8 +21,12 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="NASAMeteorite.py" />
-    <Compile Include="NASAMeteoriteHeatmap.py">
+    <Compile Include="NASAMeteorite_GeoPlotLib.py" />
+    <Compile Include="NASAMeteoriteHeatmap_GeoPlotLib.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NASAMeteoriteHeatmap_Plotly.py" />
+    <Compile Include="NASAMeteorite_Plotly.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
