@@ -33,6 +33,10 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PLARiverVisualisation", "PL
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "DetailedExploration", "DetailedExploration\DetailedExploration.pyproj", "{8890FF20-FC4F-4EB9-991A-231EBB974634}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DetailedTesting", "DetailedTesting", "{4DAA0DCA-5F4E-48D0-9053-4A02D3764218}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Template", "Template\Template.pyproj", "{81819B2F-23E0-47D1-80EB-B13E8FE99C50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,9 +73,14 @@ Global
 		{C3A36C86-E02E-4493-9C1F-125587682474}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8890FF20-FC4F-4EB9-991A-231EBB974634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8890FF20-FC4F-4EB9-991A-231EBB974634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81819B2F-23E0-47D1-80EB-B13E8FE99C50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81819B2F-23E0-47D1-80EB-B13E8FE99C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{81819B2F-23E0-47D1-80EB-B13E8FE99C50} = {4DAA0DCA-5F4E-48D0-9053-4A02D3764218}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7001BF29-5696-4FDD-BA12-6C910C31080C}

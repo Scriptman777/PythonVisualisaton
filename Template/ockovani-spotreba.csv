@@ -1,0 +1,18 @@
+﻿datum,ockovaci_misto_id,ockovaci_misto_nazev,kraj_nuts_kod,kraj_nazev,ockovaci_latka,vyrobce,pouzite_ampulky,znehodnocene_ampulky,pouzite_davky,znehodnocene_davky
+2021-10-15,7fc4f736-04a4-403d-888b-9d52f1727a2e,"OČM Nemocnice Kutná Hora",CZ020,"Středočeský kraj",Comirnaty,Pfizer,8,0,48,0
+2021-10-20,8fee58e1-58c5-42e6-abb0-013502626065,"(Bez registrace) Očkovací centrum Sedlčany - Kulturní dům Josefa Suka",CZ020,"Středočeský kraj",Comirnaty,Pfizer,10,0,60,0
+2021-10-15,53701bba-3bd8-4529-8da9-0002ac2a1f36,"(skupina 12-15) Nemocnice Děčín (KZ,a.s.) - nemocnice",CZ042,"Ústecký kraj",Comirnaty,Pfizer,6,0,36,0
+2021-06-24,281cd704-c5c4-447d-aace-debad0aa3269,"Nemocnice AGEL Říčany a.s. - Sportovní hala",CZ020,"Středočeský kraj",Comirnaty,Pfizer,100,0,600,0
+2021-08-31,df47a465-f872-4968-a8e9-057059b8e900,"Comfort Care a.s. - poliklinika Chodov, Praha 11",CZ010,"Hlavní město Praha",Comirnaty,Pfizer,3,0,18,0
+2021-10-15,da5422b1-8002-456c-aa95-9a26a5e0e622,"Nemocnice Břeclav",CZ064,"Jihomoravský kraj",Comirnaty,Pfizer,11,0,66,0
+2021-10-15,b6f39bb5-9ebf-44be-a1d1-0efacab96703,"Nemocnice Pardubice",CZ053,"Pardubický kraj",Comirnaty,Pfizer,20,0,120,0
+2021-08-30,ffddf34a-46dc-48a5-ba76-cf1c35339bf2,"Nemocnice Neratovice",CZ020,"Středočeský kraj",Comirnaty,Pfizer,15,0,90,0
+2021-05-25,b85e83d4-e9be-456d-b6b5-8e2acac97990,"Očkovací centrum Dobřichovice sportovní hala BIOS",CZ020,"Středočeský kraj",Comirnaty,Pfizer,94,0,564,0
+2021-07-28,1295fe02-0319-40e4-a482-d4b8a0bfe138,"FN Ostrava - Černá Louka Výstaviště",CZ080,"Moravskoslezský kraj",Comirnaty,Pfizer,149,0,894,0
+2021-08-30,c8e549b8-aafb-4b4c-ae3b-b1ccee70513f,"LRS Chvaly, o.p.s.",CZ010,"Hlavní město Praha",Comirnaty,Pfizer,1,0,6,0
+2021-05-27,707c3baf-21d0-48e9-b986-49e9f6097701,"MOJE AMBULANCE a.s. Zlín",CZ072,"Zlínský kraj",Comirnaty,Pfizer,6,0,36,0
+2021-07-28,65653e1e-fb9e-4f78-9e95-eb7c46d328d5,"Nemocnice Jihlava",CZ063,"Kraj Vysočina",Comirnaty,Pfizer,161,0,966,0
+2021-05-27,a1766688-7575-438d-8586-b0117a46153d,"Chrudimská nemocnice",CZ053,"Pardubický kraj",Comirnaty,Pfizer,55,0,330,0
+2021-10-15,db392f2d-3b84-46a5-8248-7d882ef766d0,"(skupina 12-15) Vsetínská nemocnice a.s.",CZ072,"Zlínský kraj",Comirnaty,Pfizer,1,0,6,0
+2021-10-15,85683ce8-5a0e-4733-b5e3-614d9d4ef335,"Nemocnice ve Frýdku-Místku, p.o.",CZ080,"Moravskoslezský kraj",Comirnaty,Pfizer,11,0,66,0
+2021-10-15,77079458-38f2-4bff-b983-7f99a07afdc3,"Fakultní nemocnice v Motole",CZ010,"Hlavní město Praha",Comirnaty,Pfizer,43,0,258,0
