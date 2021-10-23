@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>5b130c0a-0898-4988-940e-ab16c28c8441</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Matplotlib_Customisation.py</StartupFile>
+    <StartupFile>Matplotlib_ManyValues.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
