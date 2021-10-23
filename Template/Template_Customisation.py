@@ -10,7 +10,7 @@ smooth_x = np.linspace(0,2*np.pi,500)
 smooth_y = np.sin(smooth_x)
 
 random_x = np.linspace(0,100,50)
-random_y = np.random.randint(50)
+random_y = np.random.randint(50, size=50)
 
 # Experiments
 
