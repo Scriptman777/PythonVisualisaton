@@ -31,7 +31,7 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "SamsungHealthHoloviews", "S
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PLARiverVisualisation", "PLARiverVisualisation\PLARiverVisualisation.pyproj", "{C3A36C86-E02E-4493-9C1F-125587682474}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "DetailedExploration", "DetailedExploration\DetailedExploration.pyproj", "{8890FF20-FC4F-4EB9-991A-231EBB974634}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Testing", "DetailedExploration\Testing.pyproj", "{8890FF20-FC4F-4EB9-991A-231EBB974634}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DetailedTesting", "DetailedTesting", "{4DAA0DCA-5F4E-48D0-9053-4A02D3764218}"
 EndProject
