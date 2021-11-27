@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>0909c4ff-d85d-45c7-880c-fb6cfcb8eb8b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>LoadPictureFile.py</StartupFile>
+    <StartupFile>LoadSoundFile.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,9 @@
   <ItemGroup>
     <Compile Include="LoadCSV.py" />
     <Compile Include="LoadPictureFile.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoadSoundFile.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
