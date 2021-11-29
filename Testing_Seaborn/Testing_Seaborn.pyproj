@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b775ac1f-4a26-4b14-bb98-904bb8794c39</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Seaborn_ManyValues.py</StartupFile>
+    <StartupFile>Seaborn_ManyValues - FacetGrid.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,6 +24,7 @@
   <ItemGroup>
     <Compile Include="Seaborn_Customisation.py" />
     <Compile Include="Seaborn_Input.py" />
+    <Compile Include="Seaborn_ManyValues - FacetGrid.py" />
     <Compile Include="Seaborn_ManyValues.py" />
     <Compile Include="Seaborn_Output.py" />
   </ItemGroup>

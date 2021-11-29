@@ -49,3 +49,5 @@ for tick in axs[2].get_xticklabels():
     tick.set_horizontalalignment('right')
 
 plt.show()
+
+
