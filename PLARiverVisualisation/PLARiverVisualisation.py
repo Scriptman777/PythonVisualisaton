@@ -3,6 +3,7 @@ from urllib.request import urlopen
 import pandas as pd
 import plotly.express as px
 
+# ! This code is meant for a binder and will open a large amount of browser tabs if ran locally !
 
 webpage = urlopen("http://www.pla.cz/portal/sap/cz/PC/Prehled.aspx")
 page_content = webpage.read().decode("utf-8")
@@ -28,4 +29,3 @@ for url in river_urls:
     except:
         pass
 
-# https://hub.gke2.mybinder.org/user/ipython-ipython-in-depth-i86oupeo/notebooks/binder/PLARiverVisualisation.ipynb
