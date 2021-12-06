@@ -51,6 +51,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Testing_Seaborn", "Testing_
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LoadingFromPage", "LoadingFromPage\LoadingFromPage.pyproj", "{C728DB0E-4C93-445B-9DDB-DCA0378B9C83}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LoadingFromAPI", "LoadingFromAPI\LoadingFromAPI.pyproj", "{56CD332E-8209-4B09-A45B-91D2A4CD6D02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,8 @@ Global
 		{B775AC1F-4A26-4B14-BB98-904BB8794C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C728DB0E-4C93-445B-9DDB-DCA0378B9C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C728DB0E-4C93-445B-9DDB-DCA0378B9C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56CD332E-8209-4B09-A45B-91D2A4CD6D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56CD332E-8209-4B09-A45B-91D2A4CD6D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -121,6 +125,7 @@ Global
 		{0909C4FF-D85D-45C7-880C-FB6CFCB8EB8B} = {32C85689-2B52-4AC3-A518-8C737235A506}
 		{B775AC1F-4A26-4B14-BB98-904BB8794C39} = {4DAA0DCA-5F4E-48D0-9053-4A02D3764218}
 		{C728DB0E-4C93-445B-9DDB-DCA0378B9C83} = {32C85689-2B52-4AC3-A518-8C737235A506}
+		{56CD332E-8209-4B09-A45B-91D2A4CD6D02} = {32C85689-2B52-4AC3-A518-8C737235A506}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7001BF29-5696-4FDD-BA12-6C910C31080C}
