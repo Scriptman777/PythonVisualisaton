@@ -57,6 +57,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LoadingFromDatabase", "Load
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Testing_Bokeh", "Testing_Bokeh\Testing_Bokeh.pyproj", "{E15CF04C-5A6E-4092-AE86-16BEFD910555}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Testing_Plotly", "Testing_Plotly\Testing_Plotly.pyproj", "{08A8CDBA-6579-42E4-A71C-222DB0A48D6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -109,6 +111,8 @@ Global
 		{2391ADAA-89D4-4BD8-9EBC-C6ECC40DA82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E15CF04C-5A6E-4092-AE86-16BEFD910555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E15CF04C-5A6E-4092-AE86-16BEFD910555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08A8CDBA-6579-42E4-A71C-222DB0A48D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08A8CDBA-6579-42E4-A71C-222DB0A48D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -136,6 +140,7 @@ Global
 		{56CD332E-8209-4B09-A45B-91D2A4CD6D02} = {32C85689-2B52-4AC3-A518-8C737235A506}
 		{2391ADAA-89D4-4BD8-9EBC-C6ECC40DA82B} = {32C85689-2B52-4AC3-A518-8C737235A506}
 		{E15CF04C-5A6E-4092-AE86-16BEFD910555} = {4DAA0DCA-5F4E-48D0-9053-4A02D3764218}
+		{08A8CDBA-6579-42E4-A71C-222DB0A48D6F} = {4DAA0DCA-5F4E-48D0-9053-4A02D3764218}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7001BF29-5696-4FDD-BA12-6C910C31080C}
