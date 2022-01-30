@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>08a8cdba-6579-42e4-a71c-222db0a48d6f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Plotly_Customisation.py</StartupFile>
+    <StartupFile>Plotly_ManyValues.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,7 @@
     <Compile Include="Plotly_Customisation.py" />
     <Compile Include="Plotly_Express_Input .py" />
     <Compile Include="Plotly_Input.py" />
+    <Compile Include="Plotly_Express_ManyValues.py" />
     <Compile Include="Plotly_ManyValues.py" />
     <Compile Include="Plotly_Output.py" />
   </ItemGroup>
