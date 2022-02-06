@@ -42,4 +42,4 @@ curdoc().theme = 'dark_minimal'
 curdoc().add_root(row(column(r_value,x_value), plot))
 
 
-# bokeh serve --show E:\Users\Dokumenty\FIM\BC\BCWork\BokehInteractive\LogisticMap.py
+# bokeh serve --show E:\Users\Dokumenty\FIM\BC\BCWork\BokehInteractive\LogisticMap.py 

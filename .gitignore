@@ -361,6 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/LibrosaMusicVisualisation/apex.wav
-/LibrosaMusicVisualisation/omnissiah.wav
-/FolderTreeStats/map.svg
+/Complete examples/LibrosaMusicVisualisation/apex.wav
+/Complete examples/LibrosaMusicVisualisation/omnissiah.wav
+/Complete examples/FolderTreeStats/map.svg
