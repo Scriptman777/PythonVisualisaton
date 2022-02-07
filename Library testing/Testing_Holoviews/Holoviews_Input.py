@@ -3,7 +3,7 @@ import pandas as pd
 import holoviews as hv
 import webbrowser
 
-
+hv.extension('bokeh')
 graphlist = []
 
 # Python list
@@ -54,7 +54,9 @@ graphlist.append(hv.Bars(dict_data_cats, hv.Dimension('Final mark'), 'Count', la
 x = np.linspace(0,2*np.pi,500)
 y = np.sin(x)
 
-# Cannot set x and y as NumPy arrays
+curve = hv.Curve((x, y), label='NumPy array').opts(axiswise=True)
+
+graphlist.append(curve)
 
 # Pandas Dataframe
 

@@ -14,7 +14,7 @@ value_dimensions = [('profit', 'Profit'), ('employees', 'Number of employees'), 
 # Bar plot
 
 bar_chart = hv.Bars(data, key_dimensions, value_dimensions, label='Bar chart with a large amount of data')
-bar_chart.opts(width=1200, height=500) #color attribute results in an error. Bgcolor is the only available color-related attribute
+bar_chart.opts(width=1200, height=500) #color attribute results in an error. Bgcolor seems to be the only available color-related attribute
 
 hv.save(bar_chart, 'ManyValues_Plotly.html')
 
