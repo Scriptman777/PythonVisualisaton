@@ -1,13 +1,21 @@
 import requests
-import numpy as np
 import matplotlib.pyplot as plt
 import tkinter as tk
 
+
+
 def create_plot(track_id):
+
+    # GET DATA
+
+    # Get data from API
     track_id = track_id.strip()
+    # Get first 25 records
     response_times = requests.get("https://trackmania.exchange/api/replays/get_replays/" + track_id + "/25")
+    # Get info about track itself
     response_track = requests.get("https://trackmania.exchange/api/tracks/get_track_info/multi/" + track_id)
 
+    # Get JSON from responses
     try:
         res_json = response_times.json()
         res_json_track = response_track.json()
@@ -19,35 +27,42 @@ def create_plot(track_id):
         tk.messagebox.showinfo(title="Error", message="No records uploaded for this track")
         return
 
+    # PROCESS DATA
+
     track_name = res_json_track[0].get('Name')
 
     drivers = []
     times = []
+    # Create colors for visualisation, color medal positions accordingly, rest will be grey
     colors = ['goldenrod', 'silver', 'peru']
 
     for x in range (0,len(res_json)-3):
         colors.append('gray')
 
+    # Create lists of drivers and their times
     for data in res_json:
         drivers.append(data.get('Username'))
         times.append((data.get('ReplayTime'))/1000)
 
+    # VISUALIZE DATA
 
-
+    # Create bar plot from data
     fig, ax = plt.subplots(figsize =(16, 9))
-    ax.barh(drivers,times, color=colors)
+    ax.barh(drivers, times, color=colors)
     ax.invert_yaxis()
     ax.set_title('Best times for the track: ' + track_name)
 
+    # Annotate bars
     for i in ax.patches:
         plt.text(i.get_width()+0.2, i.get_y()+0.5,
                  str(i.get_width()),
-                 fontsize = 10, fontweight ='bold',
-                 color ='grey')
+                 fontsize = 10, fontweight = 'bold',
+                 color = 'grey')
 
     plt.show()
 
 
+# Simple Tkinter user interface to get track ID from the user
 
 window = tk.Tk()
 window.geometry("260x90")

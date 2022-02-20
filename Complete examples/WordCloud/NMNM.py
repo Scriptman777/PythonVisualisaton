@@ -6,6 +6,8 @@ import numpy as np
 import PIL
 import random
 
+# Recolor words to fit the color scheme of the city
+
 def recolor_func(word, font_size, position, orientation, random_state=None, **kwargs):
     
     if (random.randint(0, 100) > 30):
@@ -16,12 +18,15 @@ def recolor_func(word, font_size, position, orientation, random_state=None, **kw
         return "hsl({}, {}%, {}%)".format(0, 0, light)
     
 
+# GET DATA
 
+# Open a page from the website
 url = "https://www.novemestonm.cz/o-meste/zakladni-informace/"
 webpage = urlopen(url)
 page_content = webpage.read().decode("utf-8")
 soup = BeautifulSoup(page_content, "html.parser")
 
+# Find all links to other parts of the site and create a list of URLs
 link_list = soup.find_all("a")
 urls = []
 for link in link_list:
@@ -31,6 +36,7 @@ for link in link_list:
 all_text = ""
 progress = 0
 
+# Get all text from found pages
 for subpage in urls:
 
     try:
@@ -40,20 +46,28 @@ for subpage in urls:
         print("Progress: [" + str(progress) + "/" + str(len(urls)) + "]")        
         page_content = webpage.read().decode("utf-8")
         soup = BeautifulSoup(page_content, "html.parser")
+        # Select only the div that has page content, ignore the rest
         content_divs = soup.find_all("div", {"class": "editor_content readable"})
         for div in content_divs:
             all_text = all_text + div.text
     except:
         pass
-    
+
+
+# VISUALIZE DATA
+
+# Load a silhouette of the chateau as an array to apply to the word cloud
 mask = np.array(PIL.Image.open("NMNM.png"))
+# Skip common words that have no meaning by themselves
 skip_words = ["v", "je", "na", "k", "i", "ve", "o", "s", "z", "ke", "a", "se", "si", "ze", "za", "do", "od", "po", "pro","při", "cz", "www", "e"]
 
-cloud = WordCloud(stopwords = skip_words, max_words=1000, collocations=False, background_color="black", mask=mask, contour_width=3, contour_color='white').generate(all_text)
+# Create a Wordcloud with created mask
+cloud = WordCloud(stopwords=skip_words, max_words=1000, collocations=False, background_color="black", mask=mask, contour_width=3, contour_color='white').generate(all_text)
+# Use defined recolor function
 cloud.recolor(color_func=recolor_func)
-
+# Save to file
 cloud.to_file('WordCloudNMNM.png')
-
+# Use Matplotlib to show file in a window
 plt.figure(figsize=(10,7.5))
 plt.imshow(cloud, interpolation="bilinear")
 plt.axis("off")
