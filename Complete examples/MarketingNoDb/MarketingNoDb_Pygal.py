@@ -33,8 +33,7 @@ female_ages_chart.render_to_file('fig1.svg')
 style = Style(colors=('#0022FF', '#000000'))
 male_ages_chart = pygal.Histogram(style=style)
 male_ages_chart.title = 'Male ages'
-datalist = []
-datalist.append((male_ages_hist[0],0,edges_m[0]))
+datalist = [(male_ages_hist[0], 0, edges_m[0])]
 for x in range(1,len(male_ages_hist)):
     datalist.append((male_ages_hist[x],edges_m[x-1],edges_m[x]))
 male_ages_chart.add('Male ages', datalist)

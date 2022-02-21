@@ -1,9 +1,7 @@
 from bokeh.io import show, curdoc
 from bokeh.plotting import figure
-from bokeh.themes import built_in_themes
 from bokeh.layouts import gridplot
-from bokeh.transform import cumsum
-from bokeh.models import ColumnDataSource, FactorRange
+from bokeh.models import ColumnDataSource
 from bokeh.palettes import Cividis
 import numpy as np
 from collections import Counter
