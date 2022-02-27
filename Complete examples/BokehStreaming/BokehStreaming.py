@@ -2,20 +2,24 @@ from bokeh.plotting import figure
 from bokeh.io import show, curdoc
 from bokeh.layouts import column, row
 from bokeh.models import ColumnDataSource
-import random
 import time
 import psutil
 import GPUtil
 
+# Define a function that will add new values to the data sources every time it is called
+
 def update():
-    
+
+    # Create new dictionary
     new_data_cpu = {
     'percent' : [psutil.cpu_percent()],
     'time' : [time.time()],
     }
 
+    # Add new data, cap at 50 samples
     source_cpu.stream(new_data_cpu,50)
 
+    # Repeat for all figures
     new_data_mem_v = {
     'percent' : [psutil.virtual_memory().percent],
     'time' : [time.time()],
@@ -56,7 +60,9 @@ def update():
 
 
 
+# GET DATA
 
+# Create initial ColumnDataSource for visualisation
 
 source_cpu = ColumnDataSource(data=dict(time=[],percent=[]))
 source_mem_v = ColumnDataSource(data=dict(time=[],percent=[]))
@@ -66,6 +72,9 @@ network_recived = ColumnDataSource(data=dict(time=[],packets=[]))
 
 gpu_usage = ColumnDataSource(data=dict(time=[],percent=[]))
 gpu_temp = ColumnDataSource(data=dict(time=[],temp=[]))
+
+# VISUALIZE DATA
+# Create all the figures from data sources
 
 p_cpu = figure(plot_width=800, plot_height=400, title="CPU usage %", y_range=(0, 100))
 p_cpu.line(x='time', y='percent', source=source_cpu, line_width=2, line_color="blue")
@@ -93,11 +102,14 @@ p_gpu_temp.xaxis.visible = False
 
 
 curdoc().theme = 'dark_minimal'
+# Call update function every 100 ms
 curdoc().add_periodic_callback(update, 100)
 curdoc().add_root(column(row(p_cpu, p_mem_v), row(p_net_out, p_net_in), row(p_gpu_use, p_gpu_temp)))
 curdoc().title = "HW Usage"
 
 
 # bokeh serve --show path_to_file\BokehStreaming.py
+# Supports relative and absolute paths
 
-# bokeh serve --show E:\Users\Dokumenty\FIM\BC\BCWork\BokehStreaming\BokehStreaming.py
+
+# bokeh serve --show E:\Users\Dokumenty\FIM\BC\BCWork\Complete examples\BokehStreaming\BokehStreaming.py

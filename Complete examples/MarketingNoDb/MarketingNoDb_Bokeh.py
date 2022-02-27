@@ -57,7 +57,7 @@ fig3.xaxis.visible = False
 fig3.ygrid.visible = False
 fig3.yaxis.visible = False
 
-fig4 = figure(y_range = sizes, title="Most common sizes", plot_width=400, plot_height=400)
+fig4 = figure(y_range=sizes, title="Most common sizes", plot_width=400, plot_height=400)
 fig4.hbar(y='sizes', right='counts', color='color', width=0.9, source=size_cds)
 
 graph = gridplot([fig1, fig2, fig3, fig4], ncols=2)
