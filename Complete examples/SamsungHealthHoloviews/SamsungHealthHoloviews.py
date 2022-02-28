@@ -2,14 +2,12 @@ import holoviews as hv
 import numpy as np
 from holoviews import dim
 import pandas as pd
-from bokeh.io import show
-from bokeh.layouts import gridplot
-import csv
 import glob
 import webbrowser
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
+# Function to remove headers from csv file that are not needed and add better ends of line
 def fix_csv(csv):
     file = open(csv, 'r+')
     
@@ -22,12 +20,16 @@ def fix_csv(csv):
     file.truncate()
     file.close()
 
+# Function that gets a path to specified csv file
 def get_csv(name, list):
     for csv_file in list:
         if str(name) in csv_file:
             return csv_file
     return None
 
+# GET DATA
+
+# Get path to folder with data
 root = tk.Tk()
 root.withdraw()
 
@@ -37,12 +39,16 @@ list = glob.glob(file_path + "/*.csv")
 
 hv.extension('bokeh')
 
+# Get csv files
 heart_csv = get_csv('com.samsung.shealth.tracker.heart_rate',list)
 oxygen_csv = get_csv('com.samsung.shealth.tracker.oxygen_saturation',list)
 step_csv = get_csv('com.samsung.shealth.tracker.pedometer_day_summary',list)
 
 graphlist = []
 
+# PROCESS DATA
+
+# Try to create DataFrames from found csv files
 if heart_csv is not None:
     try:
         complete_heart_df = pd.read_csv(heart_csv)
@@ -80,8 +86,11 @@ if step_csv is not None:
         df_step = complete_step_df[['create_time','step_count']].rename(columns={"create_time": "Date", "step_count": "Steps"}).sort_values(by=['Date'])
         df_step['Date'] = pd.to_datetime(df_step['Date'])
     #axiswise attribute needed to not contaminate the other axis
-    graphlist.append(hv.Scatter(df_step).opts(width=1000, height=500, xrotation=90, color='green', axiswise=True, size=np.log10(dim('Steps'))).hist()) 
-    
+    graphlist.append(hv.Scatter(df_step).opts(width=1000, height=500, xrotation=90, color='green', axiswise=True, size=np.log10(dim('Steps'))).hist())
+
+# VISUALIZE DATA
+
+# Create graphs if possible
 if graphlist:
     layout = hv.Layout(graphlist).cols(1)
 
