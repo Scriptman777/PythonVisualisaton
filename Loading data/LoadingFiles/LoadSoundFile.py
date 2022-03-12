@@ -6,6 +6,7 @@ import scipy.io.wavfile as sciwave
 
 
 fig, axs = plt.subplots(3,1,figsize =(8, 8))
+plt.tight_layout(pad=3.0)
 
 # Load sound from file with sample rate
 audio, sample_rate = librosa.load("sheep.wav")
