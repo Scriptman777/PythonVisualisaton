@@ -1,4 +1,4 @@
-Library,Input,Output,Types,Customisation,Interactivity,Total
+Knihovna,Vstupní formáty,Výstupní formáty,Typy grafů,Možnosti přizpůsobení,Možnosti interaktivity,Total
 Matplotlib,80,100,100,100,100,96
 Seaborn,80,100,50,100,100,86
 Bokeh,100,66.7,100,100,100,93
